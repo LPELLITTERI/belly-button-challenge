@@ -1,6 +1,19 @@
 // 1)Use the D3 library to read in samples.json from the UR
 
-url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json."
+samples.json = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json."
+
+// Promise Pending
+const dataPromise = d3.json(samples.json);
+console.log("Data Promise: ", dataPromise);
+
+// Use the d3.json() function to read in the JSON file from the UR
+d3.json("samples.json")
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
 
 // 2.Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 
