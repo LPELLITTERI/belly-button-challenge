@@ -1,18 +1,10 @@
 let samples = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
 
-// Use a proxy server to avoid CORS errors
-// let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-// let url = proxyUrl + samples;
 console.log("hello")
 
 d3.json(samples).then(function(data) {
     console.log(data);
  })
-  //.catch(function(error) {
-    //console.log(error);
-  //});
- 
- // Get capsules endpoint
 
 
 // 2.Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
@@ -22,13 +14,14 @@ function buildBarChart(sample) {
   d3.json(samples).then(function(data){
     console.log(data);
 
-
+// Use sample_values as the values for the bar chart.
     let sampleValues = data.samples;
     let sampleArray = sampleValues.filter(sampleObject => sampleObject.id == sample );
     let results = sampleArray[0];
     let otu_ids = results.otu_ids;
     let yTicks = otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse();
     let x = results.sample_values.slice(0,10).reverse();
+    // Use otu_ids as the labels for the bar chart.
     let text = results.otu_labels.slice(0,10).reverse();
     console.log(results);
 
@@ -38,7 +31,8 @@ function buildBarChart(sample) {
     let barData = [ {
       y: yTicks,
       x: x,
-      text: text,
+      // Use otu_labels as the hovertext for the chart.
+      hoverText: text,
       type: "bar",
       orientation: "h",
     }]
@@ -46,25 +40,18 @@ function buildBarChart(sample) {
 
     Plotly.newPlot("bar",barData)
   });
-
-
-// Use sample_values as the values for the bar chart.
-
-// Use otu_ids as the labels for the bar chart.
 }
 function init() {
   buildBarChart(940);
 }
 
 init();
-// Use otu_labels as the hovertext for the chart.
-
-
-
-
-
 
 //3.Create a bubble chart that displays each sample.
+function buildBubbleChart(sample) {
+console.log("starting bubble chart");
+
+}
 // Use otu_ids for the x values.
 // Use sample_values for the y values.
 // Use sample_values for the marker size.
