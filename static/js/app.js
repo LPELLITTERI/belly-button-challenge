@@ -5,13 +5,6 @@ console.log("hello")
 d3.json(samples).then(function (data) {
   console.log(data);
 })
-//  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-//  const dataUrl = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json';
-
-//  d3.json(proxyUrl + dataUrl).then(function(data) {
-//    console.log(data);
-//  });
-
 
 // 2.Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 
@@ -36,6 +29,7 @@ function optionChanged(sample) {
   buildBarChart(sample);
   buildBubbleChart(sample);
   showMetadata(sample);
+  buildGuage(sample);
 }
 
 
@@ -78,6 +72,7 @@ function init() {
   buildBarChart(940);
   buildBubbleChart(940);
   showMetadata(940);
+  buildGuage(940);
 }
 init();
 
