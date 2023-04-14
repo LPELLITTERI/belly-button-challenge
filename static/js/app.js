@@ -20,6 +20,8 @@ d3.json(samples).then(function (data) {
   });
 });
 
+
+
 // // Listen for a change event on the dropdown menu
 // dropdownMenu.on('change', function () {
 //   // Get the selected sample ID from the dropdown menu
@@ -29,7 +31,7 @@ function optionChanged(sample) {
   buildBarChart(sample);
   buildBubbleChart(sample);
   showMetadata(sample);
-  buildGuage(sample);
+  buildGauge(sample);
 }
 
 
@@ -72,7 +74,7 @@ function init() {
   buildBarChart(940);
   buildBubbleChart(940);
   showMetadata(940);
-  buildGuage(940);
+  buildGauge(940);
 }
 init();
 

@@ -44,7 +44,7 @@ function buildGuage(sample) {
                         { range: [7, 8], color: "rgba(10, 120, 22, .5)" },
                         { range: [9, maxRange], color: "rgba(14, 127, 0, .7)" }
                     ],
-                    // Define the shape of the gauge needle
+                    // Define the shape of the guage needle
                     shape: [
                         {
                             type: 'line',
