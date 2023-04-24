@@ -2,7 +2,7 @@
 // You will need to modify the example gauge code to account for values ranging from 0 through 9.
 // Update the chart whenever a new sample is selected.//
 
-function buildGuage(sample) {
+function buildGauge(sample) {
     console.log('startingGuage');
     // Get Data
     d3.json(samples).then(function (data) {
