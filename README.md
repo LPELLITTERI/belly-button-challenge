@@ -1,3 +1,6 @@
+# My deployed Github page
+[Link to deployed Github page](https://lpellitteri.github.io/belly-button-challenge/)
+
 # belly-button-challenge
 ## Evaluate the biodiversity of the belly button using Dashboards and Json
 
